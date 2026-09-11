@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta 8</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-kahoot">
+        <div class="top-bar">
+            <span class="badge-pergunta">Pergunta 8 de 30</span>
+            <span class="badge-pergunta">⏱️ Frontend</span>
+        </div>
+        <div class="progress-track">
+            <div class="progress-fill" style="width:100%;"></div>
+        </div>
+        <div class="card-kahoot">
+            <h2 class="pergunta-titulo">Qual é a tag HTML correa utilizada para criar um link (um hiperligação) que redireciona o usuário para outra página?</h2>
+            <div class="answers-grid">
+                <button class="answer-btn btn-vermelho" onclick="responder('errada')"><span
+                        class="answer-shape">▲</span>&lt;link&gt;</button>
+                <button class="answer-btn btn-azul" onclick="responder('errada')"><span
+                        class="answer-shape">◆</span>&lt;href&gt;</button>
+                <button class="answer-btn btn-amarelo" onclick="responder('certa')"><span
+                        class="answer-shape">●</span>&lt;a&gt;</button>
+                <button class="answer-btn btn-verde" onclick="responder('errada')"><span
+                        class="answer-shape">■</span>&lt;url&gt;</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function responder(tipo) {
+            if (tipo === 'certa') {
+                window.location.href = 'pagina9.html';
+            } else {
+                var atual = parseInt(localStorage.getItem('erros') || '0');
+                localStorage.setItem('erros', atual + 1);
+                window.location.href = 'explicacao8.html';
+            }
+        }
+    </script>
+</body>
+
+</html>
