@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pergunta 1</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-kahoot">
+<div class="top-bar">
+<span class="badge-pergunta">Pergunta 7 de 30</span>
+<span class="badge-pergunta">⏱️ Frontend</span>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width:20%;"></div>
+</div>
+<div class="card-kahoot">
+<h2 class="pergunta-titulo">Sobre as tags de cabeçalho h1, h2 e h3 em HTML, assinale a alternativa correta:</h2>
+<div class="answers-grid">
+<button class="answer-btn btn-vermelho" onclick="responder('errada')"><span class="answer-shape">▲</span>serve so para mudar o tamanho do texto sem hierarquia</button>
+<button class="answer-btn btn-azul" onclick="responder('errada')"><span class="answer-shape">◆</span>é obrigatorio usa-las em ordem crescentes, começando por h3</button>
+<button class="answer-btn btn-amarelo" onclick="responder('certa')"><span class="answer-shape">●</span>h1 é o nivel mais importante; h2 e h3 são subtitulos hierarquicos</button>
+<button class="answer-btn btn-verde" onclick="responder('errada')"><span class="answer-shape">■</span>sao podem ser usadas dentro da tag "HEAD"</button>
+</div>
+</div>
+</div>
+<script>
+function responder(tipo){
+if(tipo === 'certa'){
+window.location.href = 'pagina8.html';
+} else {
+var atual = parseInt(localStorage.getItem('erros') || '0');
+localStorage.setItem('erros', atual + 1);
+window.location.href = 'explicacao7.html';
+}
+}
+</script>
+</body>
+</html>
