@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pergunta 25</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-kahoot">
+<div class="top-bar">
+<span class="badge-pergunta">Pergunta 1 de 5</span>
+<span class="badge-pergunta">⏱️ Frontend</span>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width:20%;"></div>
+</div>
+<div class="card-kahoot">
+<h2 class="pergunta-titulo">Qual tag usada para quebrar a linha sem criar um novo parágrafo?</h2>
+<div class="answers-grid">
+<button class="answer-btn btn-vermelho" onclick="responder('errada')"><span class="answer-shape">▲</span>hr</button>
+<button class="answer-btn btn-azul" onclick="responder('certa')"><span class="answer-shape">◆</span>br</button>
+<button class="answer-btn btn-amarelo" onclick="responder('errada')"><span class="answer-shape">●</span>h5</button>
+<button class="answer-btn btn-verde" onclick="responder('errada')"><span class="answer-shape">■</span>img src="..."</button>
+</div>
+</div>
+</div>
+<script>
+function responder(tipo){
+if(tipo === 'certa'){
+window.location.href = 'pagina26.html';
+} else {
+var atual = parseInt(localStorage.getItem('erros') || '0');
+localStorage.setItem('erros', atual + 1);
+window.location.href = 'explicacao25.html';
+}
+}
+</script>
+</body>
+</html>
