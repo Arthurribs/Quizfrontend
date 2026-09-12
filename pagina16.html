@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pergunta 16</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-kahoot">
+<div class="top-bar">
+<span class="badge-pergunta">Pergunta 16 de 30</span>
+<span class="badge-pergunta">⏱️ Frontend</span>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width:20%;"></div>
+</div>
+<div class="card-kahoot">
+<h2 class="pergunta-titulo">Qual desses frameworks é usado no Frontend?</h2>
+<div class="answers-grid">
+<button class="answer-btn btn-vermelho" onclick="responder('errada')"><span class="answer-shape">▲</span>Spring boot</button>
+<button class="answer-btn btn-azul" onclick="responder('errada')"><span class="answer-shape">◆</span>Quarkus</button>
+<button class="answer-btn btn-amarelo" onclick="responder('certa')"><span class="answer-shape">●</span>Bootstrap</button>
+<button class="answer-btn btn-verde" onclick="responder('errada')"><span class="answer-shape">■</span>Micronaut</button>
+</div>
+</div>
+</div>
+<script>
+function responder(tipo){
+if(tipo === 'certa'){
+window.location.href = 'pagina17.html';
+} else {
+var atual = parseInt(localStorage.getItem('erros') || '0');
+localStorage.setItem('erros', atual + 1);
+window.location.href = 'explicacao16.html';
+}
+}
+</script>
+</body>
+</html>
