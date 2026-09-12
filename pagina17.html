@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pergunta 4</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-kahoot">
+<div class="top-bar">
+<span class="badge-pergunta">Pergunta 17 de 31</span>
+<span class="badge-pergunta">⏱️ Frontend</span>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width:80%;"></div>
+</div>
+<div class="card-kahoot">
+<h2 class="pergunta-titulo">A tag "href" é uma tag âncora?</h2>
+<div class="answers-grid">
+    <button class="answer-btn btn-azul" onclick="responder('certa')"><span class="answer-shape">◆</span>Verdadeiro</button>
+<button class="answer-btn btn-vermelho" onclick="responder('errada')"><span class="answer-shape">▲</span>Falso</button>
+
+
+</div>
+</div>
+</div>
+<script>
+function responder(tipo){
+if(tipo === 'certa'){
+window.location.href = 'pagina18.html';
+} else {
+var atual = parseInt(localStorage.getItem('erros') || '0');
+localStorage.setItem('erros', atual + 1);
+window.location.href = 'explicacao17.html';
+}
+}
+</script>
+</body>
+</html>
