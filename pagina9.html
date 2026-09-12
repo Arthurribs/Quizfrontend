@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta 9</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-kahoot">
+        <div class="top-bar">
+            <span class="badge-pergunta">Pergunta 9 de 30</span>
+            <span class="badge-pergunta">⏱️ Frontend</span>
+        </div>
+        <div class="progress-track">
+            <div class="progress-fill" style="width:100%;"></div>
+        </div>
+        <div class="card-kahoot">
+            <h2 class="pergunta-titulo">Qual a diferença entre display: flex e display: grid</h2>
+            <div class="answers-grid">
+                <button class="answer-btn btn-vermelho" onclick="responder('errada')"><span
+                        class="answer-shape">▲</span>Flexbox é usado apenas para imagens, enquanto Grid é usado para
+                    textos e botões.</button>
+                <button class="answer-btn btn-azul" onclick="responder('certa')"><span
+                        class="answer-shape">◆</span>Flexbox: 1 dimensão; Grid: 2 dimensões (linhas e colunas).</button>
+                <button class="answer-btn btn-amarelo" onclick="responder('errada')"><span
+                        class="answer-shape">●</span>Grid é ideal para layouts em uma dimensão, enquanto Flexbox é
+                    melhor para layouts em duas dimensões.</button>
+                <button class="answer-btn btn-verde" onclick="responder('errada')"><span
+                        class="answer-shape">■</span>Flexbox organiza elementos somente em colunas, enquanto Grid
+                    organiza somente em linhas.</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function responder(tipo) {
+            if (tipo === 'certa') {
+                window.location.href = 'pagina10.html';
+            } else {
+                var atual = parseInt(localStorage.getItem('erros') || '0');
+                localStorage.setItem('erros', atual + 1);
+                window.location.href = 'explicacao9.html';
+            }
+        }
+    </script>
+</body>
+
+</html>
