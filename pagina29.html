@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pergunta 29</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-kahoot">
+<div class="top-bar">
+<span class="badge-pergunta">Pergunta 29</span>
+<span class="badge-pergunta">⏱️ Frontend</span>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width:40%;"></div>
+</div>
+<div class="card-kahoot">
+<h2 class="pergunta-titulo">Qual é a diferença entre == e === em JavaScript?</h2>
+<div class="answers-grid">
+<button class="answer-btn btn-vermelho" onclick="responder('errada')"><span class="answer-shape">▲</span> O == é usado para atribuir valores a uma variável, enquanto o === é usado para comparar se dois valores são iguais.</button>
+<button class="answer-btn btn-azul" onclick="responder('errada')"><span class="answer-shape">◆</span> O == compara o valor e o tipo de dado, enquanto o === compara apenas o valor, convertendo os tipos automaticamente.</button>
+<button class="answer-btn btn-amarelo" onclick="responder('certa')"><span class="answer-shape">●</span> O == Compara apenas o valor e o === Compara o valor e o tipo de dado</button>
+<button class="answer-btn btn-verde" onclick="responder('errada')"><span class="answer-shape">■</span>O == funciona apenas para comparar números, enquanto o === serve para comparar texto (strings) e objetos.</button>
+</div>
+</div>
+</div>
+<script>
+function responder(tipo){
+if(tipo === 'certa'){
+window.location.href = 'pagina30.html';
+} else {
+var atual = parseInt(localStorage.getItem('erros') || '0');
+localStorage.setItem('erros', atual + 1);
+window.location.href = 'explicacao29.html';
+}
+}
+</script>
+</body>
+</html>
